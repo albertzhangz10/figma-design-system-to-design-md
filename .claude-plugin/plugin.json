@@ -1,0 +1,11 @@
+{
+  "name": "figma-design-system-to-design-md",
+  "description": "Figma design system to design.md — Extract Figma design system into a structured design.md document. Automatically detects token files, style configs, and Figma MCP data to generate comprehensive design system documentation covering Colors, Typography, Spacing, Border Radius, Elevation, Responsive, and more.",
+  "version": "0.1.0",
+  "author": {
+    "name": "AskSia"
+  },
+  "homepage": "https://github.com/albertzhangz10/figma-design-system-to-design-md",
+  "repository": "https://github.com/albertzhangz10/figma-design-system-to-design-md",
+  "license": "MIT"
+}
