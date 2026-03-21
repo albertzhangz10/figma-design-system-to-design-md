@@ -12,7 +12,9 @@
 
 > Stop manually documenting your design system. Let AI read your tokens and generate the docs for you.
 
-A Claude Code skill plugin that automatically extracts design tokens from your project (CSS variables, Tailwind config, theme files) and optionally enriches them via Figma MCP, then generates a comprehensive `design.md` covering your entire design system.
+**[Try it now on the web — no setup required](https://figmadesignmd.com/)**
+
+A Claude Code skill plugin that automatically extracts design tokens from your project (CSS variables, Tailwind config, theme files) and optionally enriches them via Figma MCP, then generates a comprehensive `design.md` covering your entire design system. Non-technical users (designers, PMs) can use the [web version](https://figmadesignmd.com/) directly — just paste a Figma URL and get your design.md.
 
 ## The Problem
 

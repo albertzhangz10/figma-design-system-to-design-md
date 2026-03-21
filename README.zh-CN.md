@@ -12,7 +12,9 @@
 
 > 别再手动写设计系统文档了。让 AI 读取你的 token 文件，自动生成文档。
 
-一个 Claude Code 技能插件，自动从项目中提取设计令牌（CSS 变量、Tailwind 配置、主题文件），并可选通过 Figma MCP 补充数据，生成一份涵盖完整设计系统的 `design.md` 文档。
+**[立即在线体验 — 无需任何配置](https://figmadesignmd.com/)**
+
+一个 Claude Code 技能插件，自动从项目中提取设计令牌（CSS 变量、Tailwind 配置、主题文件），并可选通过 Figma MCP 补充数据，生成一份涵盖完整设计系统的 `design.md` 文档。设计师和 PM 等非技术用户可以直接使用[网页版](https://figmadesignmd.com/) — 粘贴 Figma 链接即可获得 design.md。
 
 ## 痛点
 
