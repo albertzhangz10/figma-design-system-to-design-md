@@ -114,7 +114,7 @@ claude --plugin-dir /path/to/figma-design-system-to-design-md
 
 ## 版权声明
 
-Copyright (c) 2024 albertzhangz10. 保留所有权利。
+Copyright (c) 2026 albertzhangz10. 保留所有权利。
 
 未经版权所有者书面许可，不得以任何形式使用、复制、修改或分发本项目的任何部分。
 
