@@ -7,7 +7,7 @@
 <p>
   <img src="https://img.shields.io/badge/Claude_Code-black?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code">
   <img src="https://img.shields.io/badge/Figma_MCP-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma MCP">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License">
+  <img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=flat-square" alt="All Rights Reserved">
 </p>
 
 > 别再手动写设计系统文档了。让 AI 读取你的 token 文件，自动生成文档。
@@ -112,9 +112,11 @@ claude --plugin-dir /path/to/figma-design-system-to-design-md
 3. 重启 Claude Code
 4. 在 Figma 中打开设计系统文件
 
-## 开源协议
+## 版权声明
 
-MIT
+Copyright (c) 2024 albertzhangz10. 保留所有权利。
+
+未经版权所有者书面许可，不得以任何形式使用、复制、修改或分发本项目的任何部分。
 
 ## 致谢
 
