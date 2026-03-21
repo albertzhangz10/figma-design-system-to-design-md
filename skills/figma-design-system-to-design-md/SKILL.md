@@ -8,6 +8,8 @@ argument-hint: "[output-path]"
 
 # Figma Design System → design.md
 
+> **Web version available:** Non-technical users (designers, PMs) can use the web app at [figmadesignmd.com](https://figmadesignmd.com) — paste a Figma URL and get a design.md without any CLI setup.
+
 You are a design system extraction agent. Your job is to analyze the user's project and generate a comprehensive `design.md` document that describes their design system.
 
 ## Workflow
@@ -69,12 +71,12 @@ Parse all collected data and classify into these categories:
 
 Generate the document using the template below. Rules:
 
-- **Only include sections where data was found.** Do not generate empty tables.
+- **Only include sections where data was found.** Do not generate empty sections.
 - Mark sections with insufficient data as `> TODO: [what needs to be added]`
 - Use the exact CSS variable names / token names from the source files
-- Include hex values for all colors
+- Include hex values for all colors, with a usage description for each
 - For semantic color tokens that reference other tokens, show both the token reference AND the resolved hex value
-- Tables must be properly formatted markdown
+- Use **bullet lists** (not tables) for all token listings — this matches the Stitch DESIGN.md format
 - All section headers must use `##`
 - Add a metadata header showing data sources
 
@@ -97,119 +99,75 @@ Then write the file to the output path.
 > Data sources: [list files that were read, e.g. `feats/tokens.css`, `tailwind.config.js`]
 > Generated: [date]
 
----
+## Overview
+
+[2–3 sentence summary: visual character, intended product, key design conventions. E.g. "A focused, minimal dark interface for a developer productivity tool. Clean lines, low visual noise, high information density."]
 
 ## Colors
 
-### Base
-
-| Token | Hex |
-|-------|-----|
-
-### [Color Group Name] (repeat for each group: Primary, Neutral, Success, Error, Warning, etc.)
-
-| Token | Hex | Notes |
-|-------|-----|-------|
-
-### Semantic Color Roles
-
-#### Text
-
-| Token | Maps to | Hex | Usage |
-|-------|---------|-----|-------|
-
-#### Surface
-
-| Token | Maps to | Hex | Usage |
-|-------|---------|-----|-------|
-
-#### Border
-
-| Token | Maps to | Hex | Usage |
-|-------|---------|-----|-------|
-
-#### Icon
-
-| Token | Maps to | Hex | Usage |
-|-------|---------|-----|-------|
-
----
+- **Primary** (#hex): CTAs, active states, key interactive elements
+- **Secondary** (#hex): Supporting UI, chips, secondary actions
+- **Surface** (#hex): Page backgrounds
+- **On-surface** (#hex): Primary text on dark backgrounds
+- **Error** (#hex): Validation errors, destructive actions
+[repeat for each color token — include hex value and usage role]
 
 ## Typography
 
-### Font Families
+- **Headline Font**: [Font family], semi-bold
+- **Body Font**: [Font family], regular, 14–16px
+- **Label Font**: [Font family], medium, 12px, uppercase for section headers
 
-| Usage | Font |
-|-------|------|
-
-### Heading
-
-| Level | Size | Line Height | Weight |
-|-------|------|-------------|--------|
-
-### Body
-
-| Level | Size | Line Height | Weight |
-|-------|------|-------------|--------|
-
-### Caption
-
-| Level | Size | Line Height |
-|-------|------|-------------|
-
----
-
-## Spacing
-
-| Token | Value |
-|-------|-------|
-
----
-
-## Border Radius
-
-| Token | Value |
-|-------|-------|
-
----
-
-## Border Width
-
-| Token | Value |
-|-------|-------|
-
----
+[Add a brief note on the relationship between headline and body fonts, and any rules about weight usage.]
 
 ## Elevation
 
-| Name | Value |
-|------|-------|
+[Describe how depth is conveyed. Either:]
+- Flat: "This design uses no shadows. Depth is conveyed through border contrast and surface color variation (surface, surface-container, surface-bright)."
+- Shadows: list each level as `- **Shadow-sm**: 0 1px 2px rgba(0,0,0,0.05)`
 
----
+[If elevation is used, specify the shadow properties (spread, blur, color) and which components should be elevated.]
+
+## Spacing
+
+- **space-1**: `4px`
+- **space-2**: `8px`
+- **space-4**: `16px`
+[repeat for each spacing token, sorted by value ascending]
+
+## Border Radius
+
+- **radius-sm**: `4px`
+- **radius-md**: `8px`
+- **radius-pill**: `100px`
+[repeat for each radius token]
+
+## Border Width
+
+- **border-thin**: `1px`
+- **border-thick**: `2px`
+[repeat for each border width token]
 
 ## Responsive
 
 - **Minimum supported width**: [value]px
 - **Approach**: [fluid / breakpoint-based / hybrid]
-- [additional responsive rules]
-
----
+- [additional breakpoint values if applicable]
 
 ## Components
 
-> TODO: [guidance on what to add]
-
----
-
-## Overview
-
-> TODO: Design intent and visual personality (to be written by designer)
-
----
+- **Buttons**: Rounded ([radius]), primary uses brand blue fill, secondary uses outline variant
+- **Cards**: [radius] corner radius, [elevation or flat description]
+- **Inputs**: 1px border, surface-variant background, [radius] corner radius
+[Focus on the components most relevant to the project. For each: name, variants, sizing, and key visual properties.]
 
 ## Do's and Don'ts
 
-> TODO: Design judgment rules (to be written by designer)
+- Do use the primary color sparingly, only for the most important action per view
+- Don't mix rounded and sharp corners in the same view
+- Do maintain 4:1 contrast ratio for all text
+- Don't use more than two font weights on a single screen
+[4–6 practical guidelines covering color usage, typography rules, spacing conventions, and component behavior]
 ```
 
 ---
@@ -219,6 +177,8 @@ Then write the file to the output path.
 1. **Never guess or fabricate values.** Only use data from actual files or Figma MCP responses.
 2. **Preserve original token names exactly**, including any typos in the source (e.g. `netural` instead of `neutral`). Note typos in a comment but do not correct them in the token name.
 3. **Resolve token references.** When a semantic token maps to another token (e.g. `var(--color-netural-900)`), show both the reference and the final hex value.
-4. **Detect the responsive approach.** Check if the project uses fixed breakpoints, fluid responsive, or a hybrid. Read the minimum viewport width from config files.
-5. **Be framework-agnostic.** This skill works with any CSS framework (Tailwind, styled-components, vanilla CSS, etc.) and any JS framework (React, Vue, Svelte, etc.).
-6. **Ask before writing.** Always confirm with the user before saving the file.
+4. **Use bullet lists, not tables.** Every token should be a bullet point with inline values and usage descriptions. This matches the Stitch DESIGN.md format that AI agents consume.
+5. **Every color needs a usage role.** Don't just list hex values — describe what each color is for (e.g. "CTAs, active states" or "Page backgrounds").
+6. **Detect the responsive approach.** Check if the project uses fixed breakpoints, fluid responsive, or a hybrid. Read the minimum viewport width from config files.
+7. **Be framework-agnostic.** This skill works with any CSS framework (Tailwind, styled-components, vanilla CSS, etc.) and any JS framework (React, Vue, Svelte, etc.).
+8. **Ask before writing.** Always confirm with the user before saving the file.
