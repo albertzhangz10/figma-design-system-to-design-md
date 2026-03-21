@@ -7,7 +7,7 @@
 <p>
   <img src="https://img.shields.io/badge/Claude_Code-black?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code">
   <img src="https://img.shields.io/badge/Figma_MCP-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma MCP">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License">
+  <img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=flat-square" alt="All Rights Reserved">
 </p>
 
 > Stop manually documenting your design system. Let AI read your tokens and generate the docs for you.
@@ -114,7 +114,9 @@ claude --plugin-dir /path/to/figma-design-system-to-design-md
 
 ## License
 
-MIT
+Copyright (c) 2024 albertzhangz10. All Rights Reserved.
+
+No part of this project may be used, copied, modified, or distributed without prior written permission.
 
 ## Credits
 
