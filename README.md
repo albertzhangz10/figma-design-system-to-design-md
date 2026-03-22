@@ -7,7 +7,7 @@
 <p>
   <img src="https://img.shields.io/badge/Claude_Code-black?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code">
   <img src="https://img.shields.io/badge/Figma_MCP-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma MCP">
-  <img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-red?style=flat-square" alt="All Rights Reserved">
+  <img src="https://img.shields.io/github/license/albertzhangz10/figma-design-system-to-design-md?style=flat-square&color=green" alt="MIT License">
 </p>
 
 > Stop manually documenting your design system. Let AI read your tokens and generate the docs for you.
