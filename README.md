@@ -1,6 +1,6 @@
-# Figma design system to design.md
+# Figma to design.md
 
-### Turn your Figma design tokens into a structured, readable design system document
+### Convert Figma design tokens into a structured design.md for AI-assisted coding
 
 **[🇨🇳 中文](README.zh-CN.md)** | **🇺🇸 English**
 
@@ -8,13 +8,14 @@
   <img src="https://img.shields.io/badge/Claude_Code-black?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code">
   <img src="https://img.shields.io/badge/Figma_MCP-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma MCP">
   <img src="https://img.shields.io/github/license/albertzhangz10/figma-design-system-to-design-md?style=flat-square&color=green" alt="MIT License">
+  <img src="https://img.shields.io/github/stars/albertzhangz10/figma-design-system-to-design-md?style=flat-square" alt="GitHub Stars">
 </p>
 
-> Stop manually documenting your design system. Let AI read your tokens and generate the docs for you.
+> Stop manually documenting your design system. Convert Figma to design.md and let AI coding tools (Cursor, Claude Code, Copilot) understand your design system.
 
-**[Try it now on the web — no setup required](https://figmadesignmd.com/)**
+**[Try it on the web — no setup required](https://figmadesignmd.com/)**
 
-A Claude Code skill plugin that automatically extracts design tokens from your project (CSS variables, Tailwind config, theme files) and optionally enriches them via Figma MCP, then generates a comprehensive `design.md` covering your entire design system. Non-technical users (designers, PMs) can use the [web version](https://figmadesignmd.com/) directly — just paste a Figma URL and get your design.md.
+A Claude Code skill plugin that converts Figma design tokens into a structured `design.md` — extracting CSS variables, Tailwind config, and theme files, optionally enriched via Figma MCP. Non-technical users (designers, PMs) can use the [web version](https://figmadesignmd.com/) directly — just paste a Figma URL and get your design.md.
 
 ## The Problem
 
@@ -116,8 +117,12 @@ claude --plugin-dir /path/to/figma-design-system-to-design-md
 
 MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Contributing
+
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
 ## Credits
 
-Built by [albertzhangz10](https://github.com/albertzhangz10).
+Built by [Albert Zhang](https://github.com/albertzhangz10).
 
 Inspired by [Google Stitch design.md](https://stitch.withgoogle.com/docs/design-md/overview) — the `design.md` format and structure are based on their work.

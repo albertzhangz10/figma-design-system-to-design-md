@@ -1,6 +1,6 @@
-# Figma 设计系统转 design.md
+# Figma 转 design.md
 
-### 将你的 Figma 设计令牌转化为结构化、可读的设计系统文档
+### 将 Figma 设计令牌转化为结构化 design.md，助力 AI 编程
 
 **🇨🇳 中文** | **[🇺🇸 English](README.md)**
 
@@ -8,6 +8,7 @@
   <img src="https://img.shields.io/badge/Claude_Code-black?style=flat-square&logo=anthropic&logoColor=white" alt="Claude Code">
   <img src="https://img.shields.io/badge/Figma_MCP-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma MCP">
   <img src="https://img.shields.io/github/license/albertzhangz10/figma-design-system-to-design-md?style=flat-square&color=green" alt="MIT License">
+  <img src="https://img.shields.io/github/stars/albertzhangz10/figma-design-system-to-design-md?style=flat-square" alt="GitHub Stars">
 </p>
 
 > 别再手动写设计系统文档了。让 AI 读取你的 token 文件，自动生成文档。
